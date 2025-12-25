@@ -1,6 +1,10 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .card {
@@ -12,21 +16,15 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 600px) {
-  .container {
-    margin-top: 10px;
-  }
-
-  h1 {
-    font-size: 24px;
-  }
-
-  button {
-    width: 100%;
-  }
+.profile-img {
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
 }
 
-h1 {
+h2 {
   color: #333;
 }
 
@@ -50,4 +48,18 @@ button {
 
 button:hover {
   background-color: darkblue;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin-top: 10px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  button {
+    width: 100%;
+  }
 }

@@ -1,65 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background: #f4f4f4;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .card {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 250px;
+  background: white;
+  padding: 30px;
+  width: 320px;
+  border-radius: 50px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.profile-img {
-  height: 120px;
-  width: 120px;
-  object-fit: cover;
-  border-radius: 50%;
+.avatar {
+  width: 100px;
+  border-radius: 50px;
   margin-bottom: 15px;
 }
 
-h2 {
-  color: #333;
+.role {
+  color: grey;
+  font-size: 14px;
 }
 
-p {
-  margin: 10px 0;
+.description {
+  margin: 15px 0;
+  font-size: 14px;
 }
 
-.active {
-  color: green;
-  font-weight: bold;
+.skills span {
+  display: inline-block;
+  background: #eaeaea;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin: 5px;
+  font-size: 12px;
+}
+
+.skills span:hover {
+  background: #ccc;
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+.projects {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.projects li {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.projects li:hover {
+  color: #007bef;
+  cursor: pointer;
 }
 
 button {
-  background-color: blue;
-  color: white;
+  display: flex;
+  justify-content: left;
+  margin-bottom: 15px;
+  padding: 8px 12px;
   border: none;
-  padding: 10px 15px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: 0.3s;
+  background: #222;
+  color: white;
 }
 
 button:hover {
-  background-color: darkblue;
+  background-color: #555;
 }
 
-@media (max-width: 600px) {
-  .container {
-    margin-top: 10px;
-  }
+.dark {
+  background: #121212;
+  color: #f4f4f4;
+}
 
-  h2 {
-    font-size: 24px;
-  }
+.dark .card {
+  background: #1e1e1e;
+}
 
-  button {
-    width: 100%;
+.dark .skills span {
+  background: #333;
+}
+
+.card {
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

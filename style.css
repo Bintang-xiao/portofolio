@@ -111,3 +111,26 @@ button:hover {
     transform: translateY(0);
   }
 }
+
+@media (max-width: 480px) {
+  .card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}

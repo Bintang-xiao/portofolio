@@ -65,7 +65,7 @@ body {
 
 .projects li a {
   text-decoration: none;
-  color: #121212;
+  color: inherit;
 }
 
 .projects li:hover {

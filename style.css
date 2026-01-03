@@ -63,7 +63,17 @@ body {
   margin: 5px 0;
 }
 
+.projects li a {
+  text-decoration: none;
+  color: #121212;
+}
+
 .projects li:hover {
+  color: #007bef;
+  cursor: pointer;
+}
+
+.projects li a:hover {
   color: #007bef;
   cursor: pointer;
 }

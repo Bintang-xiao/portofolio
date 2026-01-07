@@ -4,41 +4,83 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bintang | Frontend Developer</title>
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com?darkMode=class"></script>
   </head>
-  <body>
-    <div class="card">
-      <button id="toggle-theme">Dark Mode</button>
+  <body
+    class="min-h-screen flex items-center justify-center bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100"
+  >
+    <!-- Card -->
+    <div
+      class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl w-full max-w-md text-center"
+    >
+      <img
+        src="profile.jpeg"
+        alt="profile"
+        class="w-24 h-24 rounded-full mx-auto mb-4"
+      />
 
-      <img src="profile.jpeg" alt="profile" class="avatar" />
+      <h1 class="text-3xl font-bold">Bintang</h1>
+      <p class="text-gray-500 dark:text-gray-400 text-sm">
+        Frontend Developer (Junior)
+      </p>
 
-      <h1>Bintang</h1>
-      <p class="role">Frontend Developer</p>
-
-      <p class="description">
+      <p class="mt-4 text-sm">
         Frontend Developer pemula yang fokus membangun tampilan web yang rapi,
         responsif, dan mudah digunakan.
       </p>
 
-      <h2>Skills</h2>
-      <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
+      <h2 class="mt-6 font-semibold">Skills</h2>
+      <div class="flex justify-center gap-2 mt-2 flex-wrap">
+        <span
+          class="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-xs"
+          >HTML</span
+        >
+        <span
+          class="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-xs"
+          >CSS</span
+        >
+        <span
+          class="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-xs"
+          >JavaScript</span
+        >
       </div>
 
-      <h2>Projects</h2>
-      <ul class="projects">
-        <li>Simple Portofolio Website</li>
-        <li>Dark Mode Toggle UI</li>
-        <li>Basic DOM Interaction</li>
+      <h2 class="mt-6 font-semibold">Projects</h2>
+      <ul class="mt-2 space-y-2">
         <li>
-          <a href="todo/index.html" target="_blank">
+          <a
+            href="todo/index.html"
+            target="_blank"
+            class="text-blue-600 dark:text-blue-400 hover:underline"
+          >
             To-Do List App (JavaScript + localStorage)
           </a>
         </li>
+        <li>
+          <a
+            href="counter/index.html"
+            target="_blank"
+            class="text-blue-600 dark:text-blue-400 hover:underline"
+            >Counter App (JavaScript + localStorage)</a
+          >
+        </li>
       </ul>
     </div>
-    <script src="script.js"></script>
+
+    <script>
+      const toggleTheme = document.querySelector("#toggle-theme");
+
+      toggleTheme.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+
+        toggleTheme.textContent = document.documentElement.classList.contains(
+          "dark"
+        )
+          ? "Light Mode"
+          : "Dark Mode";
+      });
+    </script>
   </body>
 </html>
